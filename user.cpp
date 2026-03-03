@@ -10,6 +10,13 @@ User::User(int id, string name){
     user_name = name;
 }
 
+int User::getId(){
+    return user_id;
+}
+
+void User::setName(string Uname){
+    user_name = Uname;
+}
 
 void User::display(){
     cout << "User Id: " << user_id << endl;
@@ -24,5 +31,13 @@ void UserManager::addUser(int id, string name){
 void UserManager::showAllUsers(){
     for(int i=0; i<users.size(); i++){
         users[i].display();
+    }
+}
+
+void UserManager::editUser(int id, string Uname){
+    for(int i=0; i<users.size(); i++){
+        if(users[i].getId() == id){
+            users[i].setName(Uname);
+        }
     }
 }

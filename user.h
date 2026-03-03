@@ -12,6 +12,8 @@ class User{
 
     //methods
     void display();
+    int getId();
+    void setName(string Uname);
 };
 
 class UserManager{
@@ -21,5 +23,5 @@ class UserManager{
         //methods
         void addUser(int id, string name);
         void showAllUsers();
-
+        void editUser(int id, string Uname);
 };
